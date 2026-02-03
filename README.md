@@ -1,8 +1,8 @@
-📦 block-csv2json
+**block-csv2json
 
 A small Go utility that converts blockchain block data from CSV format into validated JSON, with a simple browser-based table viewer.
 
-🚀 What this project does
+** What this project does
 
 Reads block data from a CSV file
 
