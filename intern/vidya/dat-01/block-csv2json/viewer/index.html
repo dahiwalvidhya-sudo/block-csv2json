@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blockchain Blocks</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Blockchain Blocks</h2>
+
+<table id="blocksTable">
+    <thead>
+        <tr>
+            <th>Block Number</th>
+            <th>Timestamp</th>
+            <th>Tx Count</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+
+<script>
+const data = [
+  {"block_number":1001,"timestamp":"1700000000","tx_count":120},
+  {"block_number":1002,"timestamp":"1700000600","tx_count":98},
+  {"block_number":1003,"timestamp":"1700001200","tx_count":143},
+  {"block_number":1004,"timestamp":"1700001800","tx_count":76},
+  {"block_number":1005,"timestamp":"1700002400","tx_count":201}
+];
+
+const tbody = document.querySelector("#blocksTable tbody");
+
+data.forEach(block => {
+    const row = document.createElement("tr");
+    row.innerHTML = `
+        <td>${block.block_number}</td>
+        <td>${block.timestamp}</td>
+        <td>${block.tx_count}</td>
+    `;
+    tbody.appendChild(row);
+});
+</script>
+
+</body>
+</html>
